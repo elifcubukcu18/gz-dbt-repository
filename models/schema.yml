@@ -1,0 +1,52 @@
+sources:
+  - name: raw
+    schema: gz_raw_date
+    tables: 
+      - name: sales 
+        identifier: raw_gz_sales
+        description: sales data for greenweez company
+        columns:
+         - name: date_date
+           description: date for orders
+           tests: 
+                 - not_null
+         - name: orders_id
+           tests: 
+                 - not_null
+         - name: ptd_id as products_id
+           tests: 
+                 - not_null
+         - name: revenue
+           tests:
+                  - not_null
+         - name: quantity
+           tests:
+                  - not_null
+      - name: ship 
+        identifier: raw_gz_ship
+        columns: 
+         - name: orders_id
+           tests: 
+                  - not_null
+         - name: shipping_fee 
+           tests: 
+                 - not_null
+         - name: shipping_fee_1
+           tests:
+                  - not_null
+         - name: logCost as log_cost
+           tests: 
+                 - not_null
+         - name: ship_cost
+      - name: product
+        identifier: raw_gz_product
+        columns:
+          - name: products_id
+            tests: 
+                 - not_null
+          - name: purchSE_PRICE
+            tests:
+                 - not_null
+                 
+        
+ 
