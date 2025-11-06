@@ -13,7 +13,8 @@ sources:
          - name: orders_id
            tests: 
                  - not_null
-         - name: ptd_id as products_id
+                 - unique
+         - name: ptd_id
            tests: 
                  - not_null
          - name: revenue
@@ -28,13 +29,14 @@ sources:
          - name: orders_id
            tests: 
                   - not_null
+                  - unique
          - name: shipping_fee 
            tests: 
                  - not_null
          - name: shipping_fee_1
            tests:
                   - not_null
-         - name: logCost as log_cost
+         - name: logCost 
            tests: 
                  - not_null
          - name: ship_cost
@@ -44,6 +46,7 @@ sources:
           - name: products_id
             tests: 
                  - not_null
+                 - unique
           - name: purchSE_PRICE
             tests:
                  - not_null
