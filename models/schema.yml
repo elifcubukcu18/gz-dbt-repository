@@ -58,6 +58,144 @@ sources:
           - name: purchSE_PRICE
             tests:
                  - not_null
-                 
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords campaigns
+        columns:
+          - name: date_date
+            tests: 
+              - not_null
+          - name: paid_source 
+            description: show us what is the campaign source
+            tests:
+              - not_null
+          - name: campaign_key 
+            description: campaign key
+            tests:
+              - not_null
+          - name: camPGN_name 
+            description: campaign name
+            tests:
+              - not_null
+          - name: ads_cost
+            description: cost values based on campaign
+            tests:
+              -  not_null
+          - name: impression 
+            description: impression values based on campaign
+            tests:
+              - not_null
+          - name: click
+            description: impression values based on campaign
+            tests:
+              - not_null
+        tests:
+          - unique:
+             column_name: 'date_date || campaign_key'
+      - name: bing
+        identifier: raw_gz_bing
+        description: bing campaigns 
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            description: show us what is the campaign source 
+            tests:
+              - not_null
+          - name: campaign_key 
+            description: campaign key
+            tests:
+              - not_null
+          - name: camPGN_name 
+            description: campaign name
+            tests:
+              - not_null
+          - name: ads_cost
+            description: cost values based on campaign
+            tests:
+              -  not_null
+          - name: impression 
+            description: impression values based on campaign
+            tests:
+              - not_null
+          - name: click
+            description: impression values based on campaign
+            tests:
+              - not_null
+        tests:
+          - unique:
+             column_name: 'date_date || campaign_key'
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo campaigns
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            description: show us what is the campaign source 
+            tests:
+              - not_null
+          - name: campaign_key 
+            description: campaign key
+            tests:
+              - not_null
+          - name: camPGN_name 
+            description: campaign name
+            tests:
+              - not_null
+          - name: ads_cost
+            description: cost values based on campaign
+            tests:
+              -  not_null
+          - name: impression 
+            description: impression values based on campaign
+            tests:
+              - not_null
+          - name: click
+            description: impression values based on campaign
+            tests:
+              - not_null
+        tests:
+          - unique:
+             column_name: 'date_date || campaign_key'
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook campaigns
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            description: show us what is the campaign source 
+            tests:
+              - not_null
+          - name: campaign_key 
+            description: campaign key
+            tests:
+              - not_null
+          - name: camPGN_name 
+            description: campaign name
+            tests:
+              - not_null
+          - name: ads_cost
+            description: cost values based on campaign
+            tests:
+              -  not_null
+          - name: impression 
+            description: impression values based on campaign
+            tests:
+              - not_null
+          - name: click
+            description: impression values based on campaign
+            tests:
+              - not_null
+        tests:
+          - unique:
+             column_name: 'date_date || campaign_key'
+      
+
+            
         
  

@@ -9,6 +9,42 @@ models:
       description: revenue - purchase_cost
       tests: 
         - not_null
+ - name: int_campasigns 
+   description: all of campaings
+   columns:
+     - name: date_date
+       tests:
+         - not_null
+     - name: paid_source
+       description: show us what is campaign source
+       tests:
+         - not_null
+     - name: campaign_key
+       description: campaign key
+       tests:
+         - not_null
+     - name: campaign_name
+       description: campaign name
+       tests:
+         - not_null
+     - name: ads_cost 
+       description: costs value based on campaigns
+       tests:
+         - not_null
+     - name: impression 
+       description: impression of campaign
+       tests:
+         - not_null
+     - name: clicks 
+       description: clicks of campaign
+       tests:
+         - not_null
+   tests: 
+    - unique:
+       column_name: 'date_date || campaign_key || camPGN_name'
       
+
+
+   
 
        
