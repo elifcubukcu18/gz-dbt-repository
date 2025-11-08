@@ -1,3 +1,4 @@
+{{config(materialized = 'view')}}
 select
  *
  , quantity * purchase_price as purchase_cost
