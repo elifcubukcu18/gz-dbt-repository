@@ -1,0 +1,14 @@
+models:
+ - name: int_sales_margin
+   description: adds purchase_cost and margşn to sales
+   columns: 
+    - name: purchase_cost
+      tests: 
+        - not_null
+    - name: margin
+      description: revenue - purchase_cost
+      tests: 
+        - not_null
+      
+
+       
