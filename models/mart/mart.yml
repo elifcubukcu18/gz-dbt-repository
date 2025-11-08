@@ -1,0 +1,43 @@
+models: 
+  - name: finance_day
+    description: daily financial performance matrics
+    columns:
+      - name: date_date
+        description: transaction date
+        tests:
+         - not_null
+      - name: total_nb_orders
+        description: total number of orders for the day
+        tests:
+         - not_null
+      - name: sum_revenue
+        description: total turnover for the day
+        tests:
+         - not_null
+      - name: avg_basket
+        description: avgerage basket for the day
+        tests:
+         - not_null
+      - name: avg_operational_margin
+        description: operational margin percentage
+        tests:
+         - not_null
+      - name: total_purchase_cost
+        description: total purchase cost for the day
+        tests:
+         - not_null
+      - name: total_shipping_fee
+        description: total shipping fee for the day
+        tests:
+         - not_null
+      - name: total_log_cost
+        description: total log cost for the day
+        tests:
+          - not_null
+      - name: total_products_sold
+        description: total number of sold for the day
+        tests:
+          - not_null
+      
+
+ 
