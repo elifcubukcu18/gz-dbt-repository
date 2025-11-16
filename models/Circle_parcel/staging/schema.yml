@@ -1,0 +1,39 @@
+models:
+  - name: stg_cc_parcel
+    columns:
+          - name: parcel_id
+            tests:
+              - not_null
+              - unique
+          - name: parcel_tracking
+            description: parcel tracking link
+            tests:
+              - not_null
+          - name: transporter
+            description: transporter name
+            tests:
+              - not_null
+          - name: priority 
+            tests:
+              - not_null
+          - name: date_purchase
+            tests:
+              - not_null
+          - name: date_shipping 
+          - name: date_delivery
+          - name: date_cancelled
+  - name: stg_cc_parcel_products
+    columns:
+          - name: parcel_id
+            quote: true
+            tests:
+              - not_null
+          - name: model_name
+            tests:
+              - not_null
+          - name: quantity 
+            tests:
+              - not_null
+    tests:
+          - unique:
+              column_name: 'parcel_id || model_name'

@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: raw_circle
+    schema: raw_data_circle
+    tables:
+      - name: cc_parcel
+        identifier: raw_cc_parcel
+        description: parcel of order informations for circle brand
+        columns:
+          - name: Parcel_id
+            tests:
+              - not_null
+              - unique
+          - name: Parcel_tracking
+            description: parcel tracking link
+            tests:
+              - not_null
+          - name: Transporter
+            description: transporter name
+            tests:
+              - not_null
+          - name: Priority 
+            tests:
+              - not_null
+          - name: Date_purCHase
+            tests:
+              - not_null
+          - name: Date_sHIpping 
+          - name: DATE_delivery
+          - name: DaTeCANcelled
+      - name: cc_parcel_products
+        identifier: raw_cc_parcel_product
+        description: sold products model name and quantity
+        columns:
+          - name: ParCEL_id
+            quote: true
+            tests:
+              - not_null
+          - name: Model_mAME
+            tests:
+              - not_null
+          - name: QUANTITY 
+            tests:
+              - not_null
+        tests:
+          - unique:
+              column_name: 'ParCEL_id || Model_mAME'
